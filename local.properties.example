@@ -1,0 +1,29 @@
+# ============================================================================
+# EventFlow backend — local.properties template
+# ============================================================================
+# Copy this file to local.properties in the SAME directory (it is git-ignored)
+# and fill in your own values. Spring Boot loads it automatically through:
+#
+#   spring.config.import=optional:file:./local.properties
+#
+# Keys are the raw environment-variable names that application.properties
+# references with ${...}, so a line here behaves exactly like an exported var.
+# ============================================================================
+
+# MySQL connection. Use a local user for development — avoid root where possible.
+DB_URL=jdbc:mysql://localhost:3306/eventflow
+DB_USER=root
+DB_PASSWORD=
+
+# Leave this out locally unless you specifically want to test the prod profile.
+# SPRING_PROFILES_ACTIVE=prod
+
+# Uncomment only when testing JWT/CORS behaviour locally with non-default values.
+# JWT_SECRET=
+# CORS_ALLOWED_ORIGINS=http://localhost:5173
+
+# Password for the demo ADMIN account DataSeeder creates when the database has no
+# user with SEED_ADMIN_EMAIL (default tinashegomo96@gmail.com). There is no default
+# password in application.properties: without this line nothing is seeded.
+# SEED_ADMIN_PASSWORD=
+# SEED_ADMIN_EMAIL=tinashegomo96@gmail.com

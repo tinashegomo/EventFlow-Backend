@@ -1,0 +1,27 @@
+# Keep the build context small and never leak local secrets into the image.
+target/
+build/
+
+# Local development secrets (DB_USER / DB_PASSWORD live here on a dev machine)
+local.properties
+*.local
+.env
+.env.*
+!.env.example
+
+# Build wrapper - the image uses the Maven base image, not the wrapper
+mvnw
+mvnw.cmd
+.mvn/
+
+# IDE / OS noise
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Docs and logs
+HELP.md
+*.log
+logs/
